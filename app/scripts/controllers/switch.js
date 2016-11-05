@@ -8,7 +8,7 @@
  * Controller of the vkBandwagonApp
  */
 angular.module('vkBandwagonApp')
-  .controller('AboutCtrl', function () {
+  .controller('SwitchCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
