@@ -8,20 +8,47 @@
  * Controller of the vkBandwagonApp
  */
 angular.module('vkBandwagonApp')
-  .controller('DiscussCtrl', ['$scope', '$http', function ($scope, $http) {
-  	$scope.games_id = [];
-  	$scope.games_info = [];
-  	$scope.index = 0;
-
+  .controller('DiscussCtrl', ['$scope', '$http', '$q', function ($scope, $http, $q) {
 	// The Favorite Hockey Teams  
 	$scope.teamsSelection = [
-		{ id: 1, name: 'Vancouver Canucks' },
-		{ id: 2, name: 'Calgary Flames' },
-		{ id: 3, name: 'Toronto Maple Leafs' },
-		{ id: 4, name: 'Edmonton Oilers' },
+		{ id: "VAN", name: 'Vancouver Canucks', city: "Vancouver" },
+		{ id: "CGY", name: 'Calgary Flames', city: "Calgary" },
+		{ id: "TOR", name: 'Toronto Maple Leafs', city: "Toronto" },
+		{ id: "EDM", name: 'Edmonton Oilers', city: "Edmonton" },
+		{ id: "CAR", name: 'Carolina Hurricanes', city: "Carolina" },
+		{ id: "CLB", name: 'Columbus Blue Jackets', city: "Columbus" },
+		{ id: "NU", name: 'New Jersey Devils', city: "New Jersey" },
+		{ id: "NYI", name: 'New York Islanders', city: "New York" },
+		{ id: "NYR", name: 'New York Rangers', city: "New York" },
+		{ id: "PHI", name: 'Philadelphia Flyers', city: "Philadelphia" },
+		{ id: "PIT", name: 'Pittsburgh Penguins', city: "Pittsburgh" },
+		{ id: "WAS", name: 'Washington Capitals', city: "Washington" },
+		{ id: "SJ", name: 'San Jose Sharks', city: "San Jose" },
+		{ id: "LA", name: 'Los Angeles Kings', city: "Los Angeles" },
+		{ id: "BOS", name: "Boston Bruins", city: "Boston"},
+		{ id: "BUF", name: "Buffalo Sabres", city: "Buffalo"},
+		{ id: "DET", name: "Detroit Red Wings", city: "Detroit"},
+		{ id: "FLA", name: "Florida Panthers", city: "Florida"},
+		{ id: "MON", name: "Montréal Canadiens", city: "Montreal"},
+		{ id: "OTT", name: "Ottawa Senators", city: "Ottawa"},
+		{ id: "TB", name: "Tampa Bay Lightning", city: "Tampa Bay"},
+		{ id: "CHI", name: "Chicago Blackhawks", city: "Chicago"},
+		{ id: "COL", name: "Colorado Avalanche", city: "Colorado"},
+		{ id: "DAL", name: "Dallas Stars", city: "Dallas"},
+		{ id: "MIN", name: "Minnesota Wild", city: "Minnesota"},
+		{ id: "NSH", name: "Nashville Predators", city: "Nashville"},
+		{ id: "STL", name: "St. Louis Blues", city: "St. Louis"},
+		{ id: "WPG", name: "Winnipeg Jets", city: "Winnipeg"},
+		{ id: "ANA", name: "Anaheim Ducks", city: "Anaheim"},
+		{ id: "ARI", name: "Arizona Coyotes", city: "Arizona"}
 	];
 	// Ng-Model variable of the dropdown is $scope.theteamsSelection.id
 	$scope.theteamsSelection = $scope.teamsSelection[0];
+
+	$scope.teamCity = $scope.theteamsSelection.city;
+	$scope.teamID =$scope.theteamsSelection.id;
+
+
 
 	// The Rivals of the Hockey Teams
 	$scope.rivalteamsSelection = [
@@ -34,71 +61,112 @@ angular.module('vkBandwagonApp')
 	$scope.changed = function (){
 		// Check what was selected for the favorite team
 		$scope.rivalteamsSelection.id = $scope.theteamsSelection.id;
-		console.log($scope.theteamsSelection.id);
 	}
+
+	$scope.setStats = function() {
+		$scope.teamID = $scope.theteamsSelection.id;
+		$scope.teamCity = $scope.theteamsSelection.city;
+
+		$scope.getGameID();
+    };
 	
-    $http.get('./games-schedule').success(function(data){
-    	for(var i = 0; i < data.schedule.length; i++) {
-    		for(var j = 0; j < data.schedule[i].games.length; j++) {
-    			if(data.schedule[i].games[j].away.alias == "VAN" || data.schedule[i].games[j].away.alias == "VAN") {
-    				$scope.games_id.push(
-	    				data.schedule[i].games[j].id
-	    			)
-    				$scope.index++; 
-    			}
-    		}
-    	}
-    });
-    // console.log($scope.games_id.Array[0]);
-    // console.log($scope.games_id.length);
-    for(var i = 0; i < $scope.games_id.length; i++) {
-    	$http.get('https://api.sportradar.us/nhl-ot4/games/' + $scope.games_id[i] + '/boxscore.json?api_key=7zwd7ch6g37zmj5ejcjea4r3').success(function(data){
-    		console.log("in");
-    		if(data.home.name == "Canucks") {
-    			$scope.games_info.push({
-	    			total_points: data.home.points,
-	    			point_leader_name: data.home.leaders.points.full_name,
-	    			point_leader_number: data.home.leaders.points.jersey_number,
-	    			point_leader_goals: data.home.leaders.points.statistics.total.goals,
-	    			point_leader_assists: data.home.leaders.points.statistics.total.assists,
-	    			point_leader_points: data.home.leaders.points.statistics.total.points,
+  	$scope.games_id = [];
+  	$scope.games_info = [];
+  	$scope.index = 0;
 
-	    			goals_leader_name: data.home.leaders.goals.full_name,
-	    			goals_leader_number: data.home.leaders.goals.jersey_number,
-	    			goals_leader_goals: data.home.leaders.goals.statistics.total.goals,
-	    			goals_leader_assists: data.home.leaders.goals.statistics.total.assists,
-	    			goals_leader_points: data.home.leaders.goals.statistics.total.points,
+  	$scope.getGameID = function () {
+    	$http.get('./games-schedule.json').success(function(data) {
+            for(var i = 0; i < data.schedule.length; i++) {
+	    		for(var j = 0; j < data.schedule[i].games.length; j++) {
+	    			if(data.schedule[i].games[j].away.alias == $scope.teamID || data.schedule[i].games[j].home.alias == $scope.teamID) {
+	    				$scope.games_id.push({ id: data.schedule[i].games[j].id});
+	    			}
+	    		}
+	    	}
+	    	console.log($scope.games_id);
+	    	$scope.getGameStats();
+        });
+	}
 
-	    			assists_leader_name: data.home.leaders.assists.full_name,
-	    			assists_leader_number: data.home.leaders.assists.jersey_number,
-	    			assists_leader_goals: data.home.leaders.assists.statistics.total.goals,
-	    			assists_leader_assists: data.home.leaders.assists.statistics.total.assists,
-	    			assists_leader_points: data.home.leaders.assists.statistics.total.points
-	    		});
-    		} else {
-    			$scope.games_info.push({
-	    			total_points: data.away.points,
-	    			point_leader_name: data.away.leaders.points.full_name,
-	    			point_leader_number: data.away.leaders.points.jersey_number,
-	    			point_leader_goals: data.away.leaders.points.statistics.total.goals,
-	    			point_leader_assists: data.away.leaders.points.statistics.total.assists,
-	    			point_leader_points: data.away.leaders.points.statistics.total.points,
+  	$scope.getGameStats = function () {
+  		$scope.games_info = [];
+  		$scope.index = 0;
+    	console.log("s");
+	    for(var i = 0; i < $scope.games_id.length; i++) {
+	    	$http.get('./game-result.json').success(function(data){
 
-	    			goals_leader_name: data.away.leaders.goals.full_name,
-	    			goals_leader_number: data.away.leaders.goals.jersey_number,
-	    			goals_leader_goals: data.away.leaders.goals.statistics.total.goals,
-	    			goals_leader_assists: data.away.leaders.goals.statistics.total.assists,
-	    			goals_leader_points: data.away.leaders.goals.statistics.total.points,
+	    		for(var j = 0; j < data.games.length; j++) {
+	    			if(data.games[j].id == $scope.games_id[$scope.index].id) {
+	    				// console.log(data.games[j]);
+		    			if(data.games[j].home.market == $scope.teamCity) {
 
-	    			assists_leader_name: data.away.leaders.assists.full_name,
-	    			assists_leader_number: data.away.leaders.assists.jersey_number,
-	    			assists_leader_goals: data.away.leaders.assists.statistics.total.goals,
-	    			assists_leader_assists: data.away.leaders.assists.statistics.total.assists,
-	    			assists_leader_points: data.away.leaders.assists.statistics.total.points
-	    		});
-    		}
+			    			if (('points' in data.games[j].home.leaders)) {
+			    				if (('goals' in data.games[j].home.leaders)) {
+			    					if (('assists' in data.games[j].home.leaders)) {
+					    				$scope.games_info.push({
+							    			total_points_team: data.games[j].home.points,
+							    			total_points_adversary: data.games[j].away.points,
 
-    		console.log($scope.games_info);
-    	});
-    }
+							    			point_leader_name: data.games[j].home.leaders.points[0].full_name,
+							    			point_leader_number: data.games[j].home.leaders.points[0].jersey_number,
+							    			point_leader_goals: data.games[j].home.leaders.points[0].statistics.total.goals,
+							    			point_leader_assists: data.games[j].home.leaders.points[0].statistics.total.assists,
+							    			point_leader_points: data.games[j].home.leaders.points[0].statistics.total.points,
+
+							    			goals_leader_name: data.games[j].home.leaders.goals[0].full_name,
+							    			goals_leader_number: data.games[j].home.leaders.goals[0].jersey_number,
+							    			goals_leader_goals: data.games[j].home.leaders.goals[0].statistics.total.goals,
+							    			goals_leader_assists: data.games[j].home.leaders.goals[0].statistics.total.assists,
+							    			goals_leader_points: data.games[j].home.leaders.goals[0].statistics.total.points,
+
+							    			assists_leader_name: data.games[j].home.leaders.assists[0].full_name,
+							    			assists_leader_number: data.games[j].home.leaders.assists[0].jersey_number,
+							    			assists_leader_goals: data.games[j].home.leaders.assists[0].statistics.total.goals,
+							    			assists_leader_assists: data.games[j].home.leaders.assists[0].statistics.total.assists,
+							    			assists_leader_points: data.games[j].home.leaders.assists[0].statistics.total.points
+							    		});
+									}
+								}
+							}
+			    		} else if(data.games[j].away.market == $scope.teamCity) {
+
+			    			if (('points' in data.games[j].away.leaders)) {
+			    				if (('goals' in data.games[j].away.leaders)) {
+			    					if (('assists' in data.games[j].away.leaders)) {
+						    			$scope.games_info.push({
+							    			total_points_adversary: data.games[j].home.points,
+							    			total_points_team: data.games[j].away.points,
+							    			
+							    			point_leader_name: data.games[j].away.leaders.points[0].full_name,
+							    			point_leader_number: data.games[j].away.leaders.points[0].jersey_number,
+							    			point_leader_goals: data.games[j].away.leaders.points[0].statistics.total.goals,
+							    			point_leader_assists: data.games[j].away.leaders.points[0].statistics.total.assists,
+							    			point_leader_points: data.games[j].away.leaders.points[0].statistics.total.points,
+
+							    			goals_leader_name: data.games[j].away.leaders.goals[0].full_name,
+							    			goals_leader_number: data.games[j].away.leaders.goals[0].jersey_number,
+							    			goals_leader_goals: data.games[j].away.leaders.goals[0].statistics.total.goals,
+							    			goals_leader_assists: data.games[j].away.leaders.goals[0].statistics.total.assists,
+							    			goals_leader_points: data.games[j].away.leaders.goals[0].statistics.total.points,
+
+							    			assists_leader_name: data.games[j].away.leaders.assists[0].full_name,
+							    			assists_leader_number: data.games[j].away.leaders.assists[0].jersey_number,
+							    			assists_leader_goals: data.games[j].away.leaders.assists[0].statistics.total.goals,
+							    			assists_leader_assists: data.games[j].away.leaders.assists[0].statistics.total.assists,
+							    			assists_leader_points: data.games[j].away.leaders.assists[0].statistics.total.points
+							    		});
+									}
+								}
+
+							}
+		    			}
+	    			}
+	    		}
+	    		$scope.index++;
+	    	});
+	    }
+	    console.log($scope.games_info);
+	}
+	$scope.getGameID();
+
   }]);

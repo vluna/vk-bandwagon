@@ -5,12 +5,17 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <!-- 
+      Noun Projects icon contributed by:
+      Iris Roijakkers - Discuss.svg
+      Gan Khoon Lay - Fight.svg
+
+    -->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" type="text/css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -31,12 +36,13 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+
+    <div class="footer" >
       <div class="navbar navbar-fixed-bottom" role="navigation">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/discuss">Discuss</a></li>
-              <li><a ng-href="#/argue">Argue</a></li>
+              <li><a class="active" ng-href="#/">Home</a></li>
+              <li><a ng-href="#/discuss"><img src="images/discuss1.svg" class="navIcon">Flirt</a></li>
+              <li><a ng-href="#/argue"><img src="images/fight1.svg" class="navIcon2">Fight</a></li>
             </ul>
       </div>
     </div>
