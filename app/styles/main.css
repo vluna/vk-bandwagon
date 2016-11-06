@@ -28,8 +28,12 @@ body {
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 40px;
+  line-height: 30px;
   padding:2%;
+}
+
+.headings{
+  border-bottom-color: 1px solid #57CBFF;
 }
 
 .container{
@@ -66,10 +70,10 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     max-width: 730px;
-    margin-bottom:19px;
+    margin-bottom:0px;
   }
 
   /* Remove the padding we set earlier */
@@ -86,12 +90,20 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    padding-bottom: 10%;
+  }
+  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:0;
+  }
+  div.ng-scope{
+    padding-bottom:25px;
   }
 }
 
 md-select{
-  width:400px;
-  font-size:25px;
+  font-size:18px;
 }
 
 a.md-raised.md-button{
@@ -193,4 +205,16 @@ md-toolbar{
 md-select-label img{
   width:50px;
   height:50px;
+}
+
+.rival{
+  font-size:30px;
+  margin:0 auto;
+  text-align: center;
+}
+
+hr{
+  margin:0;
+  margin-bottom:10px;
+  border: 2px solid #57CBFF;
 }

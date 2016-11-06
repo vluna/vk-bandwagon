@@ -7,7 +7,8 @@
     </md-select>
     <div>
         <h3>The Rival Team is</h3>
-        {{teamCity}}
+        <div class="rival" ng-style="{'font-size:20px'}">{{rivalCity.city_rival}}</div> 
+        <div class="rival"><md-select-label><img ng-src="{{rivalCity.r_images}}"/><md-select-label></div>
     </div>
 
     <md-toolbar class="md-table-toolbar md-default setStats()" ng-repeat="n in output track by $index">
@@ -34,6 +35,7 @@
         </md-toolbar>
 
 <h3>Conversation Enders</h3>
+<hr>
     <ul>
         <li>[TEAM] such a bender/duster</li>
         <li>They are a bunch of hosers</li>
