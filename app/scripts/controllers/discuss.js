@@ -11,36 +11,36 @@ angular.module('vkBandwagonApp')
   .controller('DiscussCtrl', ['$scope', '$http', 'saveDiscuss', function ($scope, $http, saveDiscuss) {
 	// The Favorite Hockey Teams  
 	$scope.teamsSelection = [
-		{ id: "VAN", name: 'Vancouver Canucks', city: "Vancouver" },
-		{ id: "CGY", name: 'Calgary Flames', city: "Calgary" },
-		{ id: "TOR", name: 'Toronto Maple Leafs', city: "Toronto" },
-		{ id: "EDM", name: 'Edmonton Oilers', city: "Edmonton" },
-		{ id: "CAR", name: 'Carolina Hurricanes', city: "Carolina" },
-		{ id: "CLB", name: 'Columbus Blue Jackets', city: "Columbus" },
-		{ id: "NU", name: 'New Jersey Devils', city: "New Jersey" },
-		{ id: "NYI", name: 'New York Islanders', city: "New York" },
-		{ id: "NYR", name: 'New York Rangers', city: "New York" },
-		{ id: "PHI", name: 'Philadelphia Flyers', city: "Philadelphia" },
-		{ id: "PIT", name: 'Pittsburgh Penguins', city: "Pittsburgh" },
-		{ id: "WAS", name: 'Washington Capitals', city: "Washington" },
-		{ id: "SJ", name: 'San Jose Sharks', city: "San Jose" },
-		{ id: "LA", name: 'Los Angeles Kings', city: "Los Angeles" },
-		{ id: "BOS", name: "Boston Bruins", city: "Boston"},
-		{ id: "BUF", name: "Buffalo Sabres", city: "Buffalo"},
-		{ id: "DET", name: "Detroit Red Wings", city: "Detroit"},
-		{ id: "FLA", name: "Florida Panthers", city: "Florida"},
-		{ id: "MON", name: "Montréal Canadiens", city: "Montreal"},
-		{ id: "OTT", name: "Ottawa Senators", city: "Ottawa"},
-		{ id: "TB", name: "Tampa Bay Lightning", city: "Tampa Bay"},
-		{ id: "CHI", name: "Chicago Blackhawks", city: "Chicago"},
-		{ id: "COL", name: "Colorado Avalanche", city: "Colorado"},
-		{ id: "DAL", name: "Dallas Stars", city: "Dallas"},
-		{ id: "MIN", name: "Minnesota Wild", city: "Minnesota"},
-		{ id: "NSH", name: "Nashville Predators", city: "Nashville"},
-		{ id: "STL", name: "St. Louis Blues", city: "St. Louis"},
-		{ id: "WPG", name: "Winnipeg Jets", city: "Winnipeg"},
-		{ id: "ANA", name: "Anaheim Ducks", city: "Anaheim"},
-		{ id: "ARI", name: "Arizona Coyotes", city: "Arizona"}
+		{ id: "VAN", name: 'Vancouver Canucks', city: "Vancouver", images: "../images/teams/canucks.png" },
+		{ id: "CGY", name: 'Calgary Flames', city: "Calgary" , images: "../images/teams/flames.png"},
+		{ id: "TOR", name: 'Toronto Maple Leafs', city: "Toronto", images: "../images/teams/mapleleafs.png" },
+		{ id: "EDM", name: 'Edmonton Oilers', city: "Edmonton" , images: "../images/teams/oilers.png"},
+		{ id: "CAR", name: 'Carolina Hurricanes', city: "Carolina", images: "../images/teams/hurricane.png" },
+		{ id: "CLB", name: 'Columbus Blue Jackets', city: "Columbus" , images: "../images/teams/bluejackets.png"},
+		{ id: "NU", name: 'New Jersey Devils', city: "New Jersey" , images: "../images/teams/devils.png"},
+		{ id: "NYI", name: 'New York Islanders', city: "New York" , images: "../images/teams/islanders.png"},
+		{ id: "NYR", name: 'New York Rangers', city: "New York" , images: "../images/teams/rangers.png"},
+		{ id: "PHI", name: 'Philadelphia Flyers', city: "Philadelphia", images: "../images/teams/flyers.png" },
+		{ id: "PIT", name: 'Pittsburgh Penguins', city: "Pittsburgh", images: "../images/teams/penguins.png" },
+		{ id: "WAS", name: 'Washington Capitals', city: "Washington", images: "../images/teams/capitals.png" },
+		{ id: "SJ", name: 'San Jose Sharks', city: "San Jose" , images: "../images/teams/sharks.png"},
+		{ id: "LA", name: 'Los Angeles Kings', city: "Los Angeles", images: "../images/teams/kings.png" },
+		{ id: "BOS", name: "Boston Bruins", city: "Boston", images: "../images/teams/bruins.png"},
+		{ id: "BUF", name: "Buffalo Sabres", city: "Buffalo", images: "../images/teams/sabres.png"},
+		{ id: "DET", name: "Detroit Red Wings", city: "Detroit", images: "../images/teams/redwings.png"},
+		{ id: "FLA", name: "Florida Panthers", city: "Florida", images: "../images/teams/panthers.png"},
+		{ id: "MON", name: "Montréal Canadiens", city: "Montreal", images: "../images/teams/canadiens.png"},
+		{ id: "OTT", name: "Ottawa Senators", city: "Ottawa", images: "../images/teams/senators.png"},
+		{ id: "TB", name: "Tampa Bay Lightning", city: "Tampa Bay", images: "../images/teams/lightning.png"},
+		{ id: "CHI", name: "Chicago Blackhawks", city: "Chicago" , images: "../images/teams/blackhawks.png"},
+		{ id: "COL", name: "Colorado Avalanche", city: "Colorado", images: "../images/teams/avalanche.png"},
+		{ id: "DAL", name: "Dallas Stars", city: "Dallas", images: "../images/teams/stars.png"},
+		{ id: "MIN", name: "Minnesota Wild", city: "Minnesota", images: "../images/teams/wild.png"},
+		{ id: "NSH", name: "Nashville Predators", city: "Nashville", images: "../images/teams/predator.png"},
+		{ id: "STL", name: "St. Louis Blues", city: "St. Louis", images: "../images/teams/blues.png"},
+		{ id: "WPG", name: "Winnipeg Jets", city: "Winnipeg", images: "../images/teams/jets.png"},
+		{ id: "ANA", name: "Anaheim Ducks", city: "Anaheim", images: "../images/teams/ducks.png"},
+		{ id: "ARI", name: "Arizona Coyotes", city: "Arizona", images: "../images/teams/coyotes.png"}
 	];
 	// Ng-Model variable of the dropdown is $scope.theteamsSelection.id
 	$scope.theteamsSelection = $scope.teamsSelection[0];
@@ -201,15 +201,9 @@ angular.module('vkBandwagonApp')
 	    // console.log($scope.games_info.length);
 	    saveDiscuss.setDiscuss($scope.games_info);
 	    $scope.output = saveDiscuss.getDiscuss();
-		// if($scope.output.length === 0){
-		// 	$scope.output = 'no games';
-		// }
+		// console.log(saveDiscuss);
 	}
 	$scope.getGameID();
-
-	
-
-	 
 
   }])
  .service('saveDiscuss', function() {

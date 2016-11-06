@@ -16,6 +16,7 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom:19px;
 }
 
 /* Custom page header */
@@ -31,10 +32,15 @@ body {
   padding:2%;
 }
 
+.container{
+  width:100%;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
+  font-size:25px;
 }
 
 .container-narrow > hr {
@@ -63,6 +69,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+    margin-bottom:19px;
   }
 
   /* Remove the padding we set earlier */
@@ -83,20 +90,17 @@ body {
 }
 
 md-select{
-  width:200px;
+  width:400px;
+  font-size:25px;
 }
 
 a.md-raised.md-button{
- background-color:#88caff;
+ background-color:#57CBFF;
 }
 
 .header{
   color:white;
-  background-color:#44657f;
-}
-
-.navbar.navbar-fixed-bottom{
- padding-left:2%;
+  background-color:#57CBFF;
 }
 
 .navIcon{
@@ -127,6 +131,11 @@ a.md-raised.md-button{
   margin:0 auto;
   height:70px;
   line-height:70px;
+  color:white;
+}
+
+.navbar ul li a:focus{
+  color:black;
 }
 
 .navbar-nav{
@@ -135,7 +144,7 @@ a.md-raised.md-button{
 
 .navbar.navbar-fixed-bottom{
  padding-left:0;
- background-color:#88caff;
+ background-color:#57CBFF;
 }
 
 .navbar-collapse.collapse {
@@ -152,4 +161,36 @@ a.md-raised.md-button{
 
 .navbar-right {
   float: right!important;
+}
+
+md-table-container{
+  width:100%;
+}
+
+table{
+  width:100%;
+}
+
+table tr th{
+  width:33.33%;
+  font-size:15px;
+}
+
+table tr td{
+  font-size:15px;
+}
+
+.gameHeaders{
+  color:white;
+  background-color:#57CBFF;
+  padding:2%;
+}
+
+md-toolbar{
+  padding-bottom:5%;
+}
+
+md-select-label img{
+  width:50px;
+  height:50px;
 }

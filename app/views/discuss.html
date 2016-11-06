@@ -1,8 +1,46 @@
 <div ng-controller="DiscussCtrl">
     <span>Select a Hockey Team:</span>
     <md-select ng-model="theteamsSelection" ng-change="setStats()" aria-label="theteamsSelection">
-        <md-option ng-value="Team" ng-repeat="Team in teamsSelection">{{ Team.name }}</md-option>
+        <md-option ng-value="Team" ng-repeat="Team in teamsSelection">
+            <md-select-label><img src="{{ Team.images }}" /></md-select-label>
+            {{ Team.name }}</md-option>
     </md-select>
-    <h2> {{ output }}</h2>
+    <!--<div class="statsOfGame" ng-repeat="n in output track by $index" >
+        <h2>Game {{$index+1}}</h2>
+        <h3>Leaders</h3>
+        <p>Player: {{n.point_leader_name}}</p>    
+    </div>-->
 
+<md-toolbar class="md-table-toolbar md-default statsOfGame" ng-repeat="n in output track by $index">
+  <div>
+    <h3 class="gameHeaders">Game {{$index+1}}</h3>
+  </div>
+    <md-table-container>
+        <table md-table>
+            <thead md-head>
+            <tr md-row>
+                <th md-column>Points</th>
+                <th md-column>Goals</th>
+                <th md-column>Assists</th>
+            </thead>
+            <tbody md-body>
+            <tr md-row >
+                <td md-cell>{{n.point_leader_name}}  :  {{n.point_leader_points}}</td>
+                <td md-cell>{{n.goals_leader_name}}  :  {{n.goals_leader_points}}</td>
+                <td md-cell>{{n.assists_leader_name}} :  {{n.assists_leader_points}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+</md-toolbar>
+
+<h3>Conversation Starters</h3>
+    <ul>
+        <li>The last games of [TEAM] were barn burner, eh?</li>
+        <li>Sometimes you just have to risk it to get the biscuit, don’t you thing?</li>
+        <li>Sigh, hockey, 1/2 the game is mental; the other half is dental</li>
+        <li>Why is a puck called a puck? Because dirty little bastard was taken</li>
+        <li>You miss 100% of the shots you never take.</li>
+    </ul>
+        <!--{{output}}-->
 </div>
