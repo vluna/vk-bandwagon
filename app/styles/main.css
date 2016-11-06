@@ -20,7 +20,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 2%;
   text-align: center;
 }
@@ -36,7 +35,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -88,29 +86,19 @@ md-select{
   width:200px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> k-dev
 a.md-raised.md-button{
  background-color:#88caff;
 }
 
-<<<<<<< HEAD
->>>>>>> 98ee4a04a22683d54f84b8155803210386c90932
-=======
->>>>>>> k-dev
 .header{
   color:white;
   background-color:#44657f;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .navbar.navbar-fixed-bottom{
  padding-left:2%;
-=======
+}
+
 .navIcon{
   display:inline-block;
   width:40px;
@@ -147,45 +135,6 @@ a.md-raised.md-button{
 
 .navbar.navbar-fixed-bottom{
  padding-left:0;
->>>>>>> 98ee4a04a22683d54f84b8155803210386c90932
-=======
-.navIcon{
-  display:inline-block;
-  width:40px;
-}
-
-.navIcon2{
-  display:inline-block;
-  width:25px;
-}
-
-.nav.navbar-nav{
-  width:100%;
-}
-
-.nav.navbar-nav li{
-  width:33.33%;
-}
-
-.navbar{
-  height:70px;
-  min-height:0;
-}
-
-.navbar ul li a{
-  text-align:center;
-  margin:0 auto;
-  height:70px;
-  line-height:70px;
-}
-
-.navbar-nav{
-  margin:0;
-}
-
-.navbar.navbar-fixed-bottom{
- padding-left:0;
->>>>>>> k-dev
  background-color:#88caff;
 }
 

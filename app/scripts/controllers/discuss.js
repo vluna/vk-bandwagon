@@ -83,7 +83,7 @@ angular.module('vkBandwagonApp')
 	];
 	
 	for(var i = 0; i < 30; i ++) {
-		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
+		// console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
 		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
 			//saveRival.setRival($scope.teamsSelection[i]);
 			break;
@@ -108,7 +108,7 @@ angular.module('vkBandwagonApp')
 		$scope.teamID = $scope.theteamsSelection.id;
 		$scope.teamCity = $scope.theteamsSelection.city;
 		for(var i = 0; i < 30; i ++) {
-		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
+		// console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
 		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
 			//saveRival.setRival($scope.rivalteamsSelection[i]);
 			break;
@@ -132,7 +132,7 @@ angular.module('vkBandwagonApp')
 	    			}
 	    		}
 	    	}
-	    	console.log($scope.games_id);
+	    	// console.log($scope.games_id);
 	    	$scope.getGameStats();
         });
 	}
@@ -140,7 +140,7 @@ angular.module('vkBandwagonApp')
   	$scope.getGameStats = function () {
   		$scope.games_info = [];
   		$scope.index = 0;
-    	console.log("s");
+    	// console.log("s");
 	    for(var i = 0; i < $scope.games_id.length; i++) {
 	    	$http.get('./game-result.json').success(function(data){
 
@@ -214,12 +214,16 @@ angular.module('vkBandwagonApp')
 	    		$scope.index++;
 	    	});
 	    }
-	    console.log($scope.games_info);
+	    // console.log($scope.games_info.length);
 	    saveDiscuss.setDiscuss($scope.games_info);
 	    $scope.output = saveDiscuss.getDiscuss();
+		// if($scope.output.length === 0){
+		// 	$scope.output = 'no games';
+		// }
 	}
 	$scope.getGameID();
 
+	
 
 	 
 
