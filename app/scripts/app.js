@@ -15,7 +15,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngMaterial'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,10 +29,10 @@ angular
         controller: 'SwitchCtrl',
         controllerAs: 'switch'
       })
-      .when('/fight', {
-        templateUrl: 'views/fight.html',
-        controller: 'FightCtrl',
-        controllerAs: 'fight'
+      .when('/argue', {
+        templateUrl: 'views/argue.html',
+        controller: 'ArgueCtrl',
+        controllerAs: 'argue'
       })
       .when('/discuss', {
         templateUrl: 'views/discuss.html',

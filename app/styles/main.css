@@ -6,7 +6,8 @@
 }
 
 body {
-  padding: 0;
+  padding-top:0px;
+  margin-top: 0px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -69,15 +70,45 @@ body {
   .header,
   .marketing,
   .footer {
-    padding-left: 0;
+    padding-left: 2%;
     padding-right: 0;
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    padding:0;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+md-select{
+  width:200px;
+}
+
+.header{
+  color:white;
+  background-color:#44657f;
+}
+
+.navbar.navbar-fixed-bottom{
+ padding-left:2%;
+ background-color:#88caff;
+}
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
 }

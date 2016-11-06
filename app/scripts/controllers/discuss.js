@@ -13,6 +13,30 @@ angular.module('vkBandwagonApp')
   	$scope.games_info = [];
   	$scope.index = 0;
 
+	// The Favorite Hockey Teams  
+	$scope.teamsSelection = [
+		{ id: 1, name: 'Vancouver Canucks' },
+		{ id: 2, name: 'Calgary Flames' },
+		{ id: 3, name: 'Toronto Maple Leafs' },
+		{ id: 4, name: 'Edmonton Oilers' },
+	];
+	// Ng-Model variable of the dropdown is $scope.theteamsSelection.id
+	$scope.theteamsSelection = $scope.teamsSelection[0];
+
+	// The Rivals of the Hockey Teams
+	$scope.rivalteamsSelection = [
+		{ id: 1, name: 'Toronto Maple Leafs' },
+		{ id: 2, name: 'Edmonton Oilers' },
+		{ id: 3, name: 'Vancouver Canucks' },
+		{ id: 4, name: 'Calgary Flames' },
+	]
+
+	$scope.changed = function (){
+		// Check what was selected for the favorite team
+		$scope.rivalteamsSelection.id = $scope.theteamsSelection.id;
+		console.log($scope.theteamsSelection.id);
+	}
+	
     $http.get('./games-schedule').success(function(data){
     	for(var i = 0; i < data.schedule.length; i++) {
     		for(var j = 0; j < data.schedule[i].games.length; j++) {
@@ -25,8 +49,8 @@ angular.module('vkBandwagonApp')
     		}
     	}
     });
-    console.log($scope.games_id.Array[0]);
-    console.log($scope.games_id.length);
+    // console.log($scope.games_id.Array[0]);
+    // console.log($scope.games_id.length);
     for(var i = 0; i < $scope.games_id.length; i++) {
     	$http.get('https://api.sportradar.us/nhl-ot4/games/' + $scope.games_id[i] + '/boxscore.json?api_key=7zwd7ch6g37zmj5ejcjea4r3').success(function(data){
     		console.log("in");
