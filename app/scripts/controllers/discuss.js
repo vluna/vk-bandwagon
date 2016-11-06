@@ -83,42 +83,26 @@ angular.module('vkBandwagonApp')
 	];
 	
 	for(var i = 0; i < 30; i ++) {
-		// console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
 		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
-			//saveRival.setRival($scope.teamsSelection[i]);
+			saveDiscuss.setRival($scope.teamsSelection[i]);
 			break;
 		}
 	}
-
-	// $scope.changed = function (){
-	// 	// Check what was selected for the favorite team
-	// 	console.log(saveRival.getRival());
-	// 	for(var i = 0; i < 30; i ++) {
-	// 		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
-	// 		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
-	// 			console.log("S" + $scope.rivalteamsSelection[i].id);
-	// 			$scope.theteamsSelection.id = $scope.rivalteamsSelection[i].id;
-	// 			$scope.theteamsSelection = $scope.teamsSelection[0];
-	// 			break;
-	// 		}
-	// 	}
-	// }
 
 	$scope.setStats = function() {
 		$scope.teamID = $scope.theteamsSelection.id;
 		$scope.teamCity = $scope.theteamsSelection.city;
 		for(var i = 0; i < 30; i ++) {
-		// console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
-		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
-			//saveRival.setRival($scope.rivalteamsSelection[i]);
-			break;
+			if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
+				saveDiscuss.setRival($scope.rivalteamsSelection[i]);
+				break;
+			}
 		}
-	}
 
 		$scope.getGameID();
     };
 
-	
+
   	$scope.games_id = [];
   	$scope.games_info = [];
   	$scope.index = 0;
@@ -230,7 +214,7 @@ angular.module('vkBandwagonApp')
   }])
  .service('saveDiscuss', function() {
     var discuss;
-
+    var rival;
 
     var setDiscuss = function(obj) {
 		  discuss = obj;
@@ -240,8 +224,18 @@ angular.module('vkBandwagonApp')
     	return discuss;
   	};
 
+  	var setRival = function(obj) {
+		  rival = obj;
+    };
+
+    var getRival = function(){
+    	return rival;
+  	};
+
     return {
   		setDiscuss: setDiscuss,
   		getDiscuss: getDiscuss,
+  		setRival: setRival,
+  		getRival: getRival,
     };
   });

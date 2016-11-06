@@ -8,7 +8,7 @@
  * Controller of the vkBandwagonApp
  */
 angular.module('vkBandwagonApp')
-  .controller('ArgueCtrl', ['$scope', '$http', 'saveRival', function ($scope, $http, saveRival) {
+  .controller('ArgueCtrl', ['$scope', '$http', 'saveDiscuss', 'saveRival', function ($scope, $http, saveDiscuss, saveRival) {
 	// The Favorite Hockey Teams  
 
 	// Ng-Model variable of the dropdown is $scope.theteamsSelection.id
@@ -47,35 +47,30 @@ angular.module('vkBandwagonApp')
 		{ id: "ARI", id_rival: "CAR", name: "Arizona Coyotes", city: "Arizona", city_rival:"Carolina"}
 	];
 
-	$scope.l = saveRival.getRival();
-	console.log($scope.l);
-	$scope.therivalteamsSelection = $scope.l.id;
-	console.log("L: "+ $scope.therivalteamsSelection);
-	// for(var i = 0; i < 30; i ++) {
-	// 	console.log($scope.l.id + " == " + $scope.rivalteamsSelection[i].id_rival);
-	// 	if($scope.l.id == $scope.rivalteamsSelection[i].id_rival) {
-	// 		console.log("S" + $scope.rivalteamsSelection[i].id);
-	// 		$scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
-	// 		break;
-	// 	}
-	// }
-	//$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
-	
-	$scope.teamCity = $scope.l.city;
-	$scope.teamID =$scope.l.id;
-	
+	$scope.output;
 
-	// $scope.changed = function (){
-	// 	// Check what was selected for the favorite team
-	// 	console.log(saveRival.getRival());
+	$scope.rival = saveDiscuss.getRival();
+	for(var i = 0; i < 30; i ++) {
+		if(typeof $scope.rival === 'undefined') {
+			$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
+			$scope.teamCity = $scope.therivalteamsSelection.city;
+			$scope.teamID =$scope.therivalteamsSelection.id;
+			break;
+		}
+		if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
+			$scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
+			$scope.teamCity = $scope.rival.city;
+			$scope.teamID =$scope.rival.id;
+			break;
+		}
+	}
 
-	// }
 
 	$scope.setStats = function() {
 		$scope.teamID = $scope.therivalteamsSelection.id;
 		$scope.teamCity = $scope.therivalteamsSelection.city;
 
-
+		console.log($scope.teamID);
 		$scope.getGameID();
     };
 
@@ -104,7 +99,6 @@ angular.module('vkBandwagonApp')
     	console.log("s");
 	    for(var i = 0; i < $scope.games_id.length; i++) {
 	    	$http.get('./game-result.json').success(function(data){
-
 	    		for(var j = 0; j < data.games.length; j++) {
 	    			if(data.games[j].id == $scope.games_id[$scope.index].id) {
 	    				// console.log(data.games[j]);
@@ -176,7 +170,25 @@ angular.module('vkBandwagonApp')
 	    	});
 	    }
 	    console.log($scope.games_info);
+	   	saveRival.setSaveRival($scope.games_info);
+	    $scope.output = saveRival.getSaveRival();
 	}
 	$scope.getGameID();
 
   }])
+ .service('saveRival', function() {
+    var save_rival;
+
+    var setSaveRival = function(obj) {
+		  save_rival = obj;
+    };
+
+    var getSaveRival = function(){
+    	return save_rival;
+  	};
+
+    return {
+  		setSaveRival: setSaveRival,
+  		getSaveRival: getSaveRival,
+    };
+  });
