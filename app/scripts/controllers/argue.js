@@ -48,7 +48,6 @@ angular.module('vkBandwagonApp')
 	];
 
 	$scope.rivalCity;
-<<<<<<< HEAD
 	$scope.output;
 	$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
 
@@ -107,8 +106,6 @@ angular.module('vkBandwagonApp')
 	    	$scope.getGameStats();
         });
 	}
-
-=======
     $scope.output;
     $scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
 
@@ -167,7 +164,6 @@ angular.module('vkBandwagonApp')
             $scope.getGameStats();
        });
     }
->>>>>>> 832e8670b618a73f46bc74cd8731d68b7c47d34e
   	$scope.getGameStats = function () {
   		$scope.games_info = [];
   		$scope.index = 0;
