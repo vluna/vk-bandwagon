@@ -47,47 +47,45 @@ angular.module('vkBandwagonApp')
 		{ id: "ARI", id_rival: "CAR", name: "Arizona Coyotes", city: "Arizona", city_rival:"Carolina" , images: "../images/teams/coyotes.png"}
 	];
 
+	$scope.rivalCity;
 	$scope.output;
 	$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
 
+	$scope.teamCity = $scope.therivalteamsSelection.city_rival;
+	$scope.teamID = $scope.therivalteamsSelection.id_rival;
+	$scope.rivalCity = $scope.therivalteamsSelection;
+
+	console.log($scope.rivalCity.city_rival);
+
 	$scope.rival = saveDiscuss.getRival();
-	// for(var i = 0; i < 30; i ++) {
-	// 	if(typeof $scope.rival === 'undefined') {
-	// 		$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
-	// 		$scope.teamCity = $scope.therivalteamsSelection.city;
-	// 		$scope.teamID =$scope.therivalteamsSelection.id;
-	// 		break;
-	// 	}
-	// 	if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
-	// 		$scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
-	// 		$scope.teamCity = $scope.rival.city;
-	// 		$scope.teamID =$scope.rival.id;
-	// 		break;
-	// 	}
-	// }
-
-	console.log($scope.rival.city);
 
 
-		$scope.setStats = function() {
+	console.log($scope.rival);
+
+
+	$scope.setStats = function() {
 		$scope.teamID = $scope.therivalteamsSelection.id;
 		$scope.teamCity = $scope.therivalteamsSelection.city;
 
 		console.log($scope.teamID);
-		$scope.getGameID();
-
 		for(var i = 0; i < 30; i ++) {
 			if(typeof $scope.rival === 'undefined') {
-				
+				$scope.rivalCity = $scope.therivalteamsSelection;
+				$scope.teamCity = $scope.rivalCity.city_rival;
+				$scope.teamID =$scope.rivalCity.id_rival;
 				break;
 			}
-			if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
-				$scope.teamCity = $scope.rival.city;
-				$scope.teamID =$scope.rival.id;
-
+			if($scope.teamID == $scope.rivalteamsSelection[i].id) {
+				$scope.rivalCity = $scope.rivalteamsSelection[i];
+				console.log($scope.rivalCity);
+				// $scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
+				$scope.teamCity = $scope.rivalCity.city_rival;
+				$scope.teamID =$scope.rivalCity.id_rival;
 				break;
 			}
 		}
+
+		$scope.getGameID();
     };
 
 	
