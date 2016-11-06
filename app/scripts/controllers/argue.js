@@ -15,63 +15,79 @@ angular.module('vkBandwagonApp')
 	
 	// The Rivals of the Hockey Teams
 	$scope.rivalteamsSelection = [
-		{ id: "VAN", id_rival: "TOR", name: 'Vancouver Canucks', city: "Vancouver", city_rival:"Toronto" },
-		{ id: "CGY", id_rival: "EDM", name: 'Calgary Flames', city: "Calgary", city_rival:"Edmonton" },
-		{ id: "TOR", id_rival: "VAN", name: 'Toronto Maple Leafs', city: "Toronto", city_rival:"Montreal" },
-		{ id: "EDM", id_rival: "CGY", name: 'Edmonton Oilers', city: "Edmonton", city_rival:"Calgary" },
-		{ id: "CAR", id_rival: "ARI", name: 'Carolina Hurricanes', city: "Carolina", city_rival:"Arizona" },
-		{ id: "CLB", id_rival: "PIT", name: 'Columbus Blue Jackets', city: "Columbus", city_rival:"Pittsburgh" },
-		{ id: "NU", id_rival: "NYR", name: 'New Jersey Devils', city: "New Jersey", city_rival:"New York" },
-		{ id: "NYI", id_rival: "NYR", name: 'New York Islanders', city: "New York", city_rival:"New York" },
-		{ id: "NYR", id_rival: "NYI", name: 'New York Rangers', city: "New York", city_rival:"New York" },
-		{ id: "PHI", id_rival: "PIT", name: 'Philadelphia Flyers', city: "Philadelphia", city_rival:"Pittsburgh" },
-		{ id: "PIT", id_rival: "WAS", name: 'Pittsburgh Penguins', city: "Pittsburgh", city_rival:"Washington" },
-		{ id: "WAS", id_rival: "PIT", name: 'Washington Capitals', city: "Washington", city_rival:"Pittsburgh" },
-		{ id: "SJ", id_rival: "LA", name: 'San Jose Sharks', city: "San Jose", city_rival:"Los Angeles" },
-		{ id: "LA", id_rival: "CHI", name: 'Los Angeles Kings', city: "Los Angeles", city_rival:"Chicago" },
-		{ id: "BOS", id_rival: "MON", name: "Boston Bruins", city: "Boston", city_rival:"Montreal"},
-		{ id: "BUF", id_rival: "BOS", name: "Buffalo Sabres", city: "Buffalo", city_rival:"Boston"},
-		{ id: "DET", id_rival: "TOR", name: "Detroit Red Wings", city: "Detroit", city_rival:"Toronto"},
-		{ id: "FLA", id_rival: "TB", name: "Florida Panthers", city: "Florida", city_rival:"Tampa Bay"},
-		{ id: "MON", id_rival: "TOR", name: "Montréal Canadiens", city: "Montreal", city_rival:"Toronto"},
-		{ id: "OTT", id_rival: "MON", name: "Ottawa Senators", city: "Ottawa", city_rival:"Montreal"},
-		{ id: "TB", id_rival: "FLA", name: "Tampa Bay Lightning", city: "Tampa Bay", city_rival:"Florida"},
-		{ id: "CHI", id_rival: "LA", name: "Chicago Blackhawks", city: "Chicago", city_rival:"Los Angeles"},
-		{ id: "COL", id_rival: "NSH", name: "Colorado Avalanche", city: "Colorado", city_rival:"Nashville"},
-		{ id: "DAL", id_rival: "BOS", name: "Dallas Stars", city: "Dallas", city_rival:"Boston"},
-		{ id: "MIN", id_rival: "CHI", name: "Minnesota Wild", city: "Minnesota", city_rival:"Chicago"},
-		{ id: "NSH", id_rival: "COL", name: "Nashville Predators", city: "Nashville", city_rival:"Colorado"},
-		{ id: "STL", id_rival: "CHI", name: "St. Louis Blues", city: "St. Louis", city_rival:"Chicago"},
-		{ id: "WPG", id_rival: "CGY", name: "Winnipeg Jets", city: "Winnipeg", city_rival:"Calgary"},
-		{ id: "ANA", id_rival: "LA", name: "Anaheim Ducks", city: "Anaheim", city_rival:"Los Angeles"},
-		{ id: "ARI", id_rival: "CAR", name: "Arizona Coyotes", city: "Arizona", city_rival:"Carolina"}
+		{ id: "VAN", id_rival: "TOR", name: 'Vancouver Canucks', city: "Vancouver", city_rival:"Toronto" , images: "../images/teams/canucks.png"},
+		{ id: "CGY", id_rival: "EDM", name: 'Calgary Flames', city: "Calgary", city_rival:"Edmonton", images: "../images/teams/flames.png"},
+		{ id: "TOR", id_rival: "VAN", name: 'Toronto Maple Leafs', city: "Toronto", city_rival:"Montreal" , images: "../images/teams/mapleleafs.png"},
+		{ id: "EDM", id_rival: "CGY", name: 'Edmonton Oilers', city: "Edmonton", city_rival:"Calgary" , images: "../images/teams/oilers.png"},
+		{ id: "CAR", id_rival: "ARI", name: 'Carolina Hurricanes', city: "Carolina", city_rival:"Arizona", images: "../images/teams/hurricane.png"  },
+		{ id: "CLB", id_rival: "PIT", name: 'Columbus Blue Jackets', city: "Columbus", city_rival:"Pittsburgh", images: "../images/teams/bluejackets.png" },
+		{ id: "NU", id_rival: "NYR", name: 'New Jersey Devils', city: "New Jersey", city_rival:"New York" , images: "../images/teams/devils.png"},
+		{ id: "NYI", id_rival: "NYR", name: 'New York Islanders', city: "New York", city_rival:"New York"  , images: "../images/teams/islanders.png"},
+		{ id: "NYR", id_rival: "NYI", name: 'New York Rangers', city: "New York", city_rival:"New York"  , images: "../images/teams/rangers.png"},
+		{ id: "PHI", id_rival: "PIT", name: 'Philadelphia Flyers', city: "Philadelphia", city_rival:"Pittsburgh" , images: "../images/teams/flyers.png"},
+		{ id: "PIT", id_rival: "WAS", name: 'Pittsburgh Penguins', city: "Pittsburgh", city_rival:"Washington" , images: "../images/teams/penguins.png"},
+		{ id: "WAS", id_rival: "PIT", name: 'Washington Capitals', city: "Washington", city_rival:"Pittsburgh", images: "../images/teams/capitals.png" },
+		{ id: "SJ", id_rival: "LA", name: 'San Jose Sharks', city: "San Jose", city_rival:"Los Angeles" , images: "../images/teams/sharks.png" },
+		{ id: "LA", id_rival: "CHI", name: 'Los Angeles Kings', city: "Los Angeles", city_rival:"Chicago" , images: "../images/teams/kings.png"},
+		{ id: "BOS", id_rival: "MON", name: "Boston Bruins", city: "Boston", city_rival:"Montreal", images: "../images/teams/bruins.png"},
+		{ id: "BUF", id_rival: "BOS", name: "Buffalo Sabres", city: "Buffalo", city_rival:"Boston", images: "../images/teams/sabres.png"},
+		{ id: "DET", id_rival: "TOR", name: "Detroit Red Wings", city: "Detroit", city_rival:"Toronto", images: "../images/teams/redwings.png"},
+		{ id: "FLA", id_rival: "TB", name: "Florida Panthers", city: "Florida", city_rival:"Tampa Bay", images: "../images/teams/panthers.png"},
+		{ id: "MON", id_rival: "TOR", name: "Montréal Canadiens", city: "Montreal", city_rival:"Toronto", images: "../images/teams/canadiens.png"},
+		{ id: "OTT", id_rival: "MON", name: "Ottawa Senators", city: "Ottawa", city_rival:"Montreal", images: "../images/teams/senators.png"},
+		{ id: "TB", id_rival: "FLA", name: "Tampa Bay Lightning", city: "Tampa Bay", city_rival:"Florida" , images: "../images/teams/lightning.png"},
+		{ id: "CHI", id_rival: "LA", name: "Chicago Blackhawks", city: "Chicago", city_rival:"Los Angeles" , images: "../images/teams/blackhawks.png"},
+		{ id: "COL", id_rival: "NSH", name: "Colorado Avalanche", city: "Colorado", city_rival:"Nashville" , images: "../images/teams/avalanche.png"},
+		{ id: "DAL", id_rival: "BOS", name: "Dallas Stars", city: "Dallas", city_rival:"Boston" , images: "../images/teams/stars.png"},
+		{ id: "MIN", id_rival: "CHI", name: "Minnesota Wild", city: "Minnesota", city_rival:"Chicago" , images: "../images/teams/wild.png"},
+		{ id: "NSH", id_rival: "COL", name: "Nashville Predators", city: "Nashville", city_rival:"Colorado" , images: "../images/teams/predator.png"},
+		{ id: "STL", id_rival: "CHI", name: "St. Louis Blues", city: "St. Louis", city_rival:"Chicago" , images: "../images/teams/blues.png"},
+		{ id: "WPG", id_rival: "CGY", name: "Winnipeg Jets", city: "Winnipeg", city_rival:"Calgary" , images: "../images/teams/jets.png"},
+		{ id: "ANA", id_rival: "LA", name: "Anaheim Ducks", city: "Anaheim", city_rival:"Los Angeles" , images: "../images/teams/ducks.png"},
+		{ id: "ARI", id_rival: "CAR", name: "Arizona Coyotes", city: "Arizona", city_rival:"Carolina" , images: "../images/teams/coyotes.png"}
 	];
 
 	$scope.output;
+	$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
 
 	$scope.rival = saveDiscuss.getRival();
-	for(var i = 0; i < 30; i ++) {
-		if(typeof $scope.rival === 'undefined') {
-			$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
-			$scope.teamCity = $scope.therivalteamsSelection.city;
-			$scope.teamID =$scope.therivalteamsSelection.id;
-			break;
-		}
-		if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
-			$scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
-			$scope.teamCity = $scope.rival.city;
-			$scope.teamID =$scope.rival.id;
-			break;
-		}
-	}
+	// for(var i = 0; i < 30; i ++) {
+	// 	if(typeof $scope.rival === 'undefined') {
+	// 		$scope.therivalteamsSelection = $scope.rivalteamsSelection[0];
+	// 		$scope.teamCity = $scope.therivalteamsSelection.city;
+	// 		$scope.teamID =$scope.therivalteamsSelection.id;
+	// 		break;
+	// 	}
+	// 	if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
+	// 		$scope.therivalteamsSelection = $scope.rivalteamsSelection[i];
+	// 		$scope.teamCity = $scope.rival.city;
+	// 		$scope.teamID =$scope.rival.id;
+	// 		break;
+	// 	}
+	// }
+
+	console.log($scope.rival.city);
 
 
-	$scope.setStats = function() {
+		$scope.setStats = function() {
 		$scope.teamID = $scope.therivalteamsSelection.id;
 		$scope.teamCity = $scope.therivalteamsSelection.city;
 
 		console.log($scope.teamID);
 		$scope.getGameID();
+
+		for(var i = 0; i < 30; i ++) {
+			if(typeof $scope.rival === 'undefined') {
+				
+				break;
+			}
+			if($scope.rival.id == $scope.rivalteamsSelection[i].id) {
+				$scope.teamCity = $scope.rival.city;
+				$scope.teamID =$scope.rival.id;
+
+				break;
+			}
+		}
     };
 
 	
