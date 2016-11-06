@@ -8,7 +8,7 @@
  * Controller of the vkBandwagonApp
  */
 angular.module('vkBandwagonApp')
-  .controller('DiscussCtrl', ['$scope', '$http', '$q', function ($scope, $http, $q) {
+  .controller('DiscussCtrl', ['$scope', '$http', 'saveDiscuss', function ($scope, $http, saveDiscuss) {
 	// The Favorite Hockey Teams  
 	$scope.teamsSelection = [
 		{ id: "VAN", name: 'Vancouver Canucks', city: "Vancouver" },
@@ -48,32 +48,81 @@ angular.module('vkBandwagonApp')
 	$scope.teamCity = $scope.theteamsSelection.city;
 	$scope.teamID =$scope.theteamsSelection.id;
 
-
-
 	// The Rivals of the Hockey Teams
 	$scope.rivalteamsSelection = [
-		{ id: 1, name: 'Toronto Maple Leafs' },
-		{ id: 2, name: 'Edmonton Oilers' },
-		{ id: 3, name: 'Vancouver Canucks' },
-		{ id: 4, name: 'Calgary Flames' },
-	]
-
-	$scope.changed = function (){
-		// Check what was selected for the favorite team
-		$scope.rivalteamsSelection.id = $scope.theteamsSelection.id;
+		{ id: "VAN", id_rival: "TOR", name: 'Vancouver Canucks', city: "Vancouver", city_rival:"Toronto" },
+		{ id: "CGY", id_rival: "EDM", name: 'Calgary Flames', city: "Calgary", city_rival:"Edmonton" },
+		{ id: "TOR", id_rival: "VAN", name: 'Toronto Maple Leafs', city: "Toronto", city_rival:"Montreal" },
+		{ id: "EDM", id_rival: "CGY", name: 'Edmonton Oilers', city: "Edmonton", city_rival:"Calgary" },
+		{ id: "CAR", id_rival: "ARI", name: 'Carolina Hurricanes', city: "Carolina", city_rival:"Arizona" },
+		{ id: "CLB", id_rival: "PIT", name: 'Columbus Blue Jackets', city: "Columbus", city_rival:"Pittsburgh" },
+		{ id: "NU", id_rival: "NYR", name: 'New Jersey Devils', city: "New Jersey", city_rival:"New York" },
+		{ id: "NYI", id_rival: "NYR", name: 'New York Islanders', city: "New York", city_rival:"New York" },
+		{ id: "NYR", id_rival: "NYI", name: 'New York Rangers', city: "New York", city_rival:"New York" },
+		{ id: "PHI", id_rival: "PIT", name: 'Philadelphia Flyers', city: "Philadelphia", city_rival:"Pittsburgh" },
+		{ id: "PIT", id_rival: "WAS", name: 'Pittsburgh Penguins', city: "Pittsburgh", city_rival:"Washington" },
+		{ id: "WAS", id_rival: "PIT", name: 'Washington Capitals', city: "Washington", city_rival:"Pittsburgh" },
+		{ id: "SJ", id_rival: "LA", name: 'San Jose Sharks', city: "San Jose", city_rival:"Los Angeles" },
+		{ id: "LA", id_rival: "CHI", name: 'Los Angeles Kings', city: "Los Angeles", city_rival:"Chicago" },
+		{ id: "BOS", id_rival: "MON", name: "Boston Bruins", city: "Boston", city_rival:"Montreal"},
+		{ id: "BUF", id_rival: "BOS", name: "Buffalo Sabres", city: "Buffalo", city_rival:"Boston"},
+		{ id: "DET", id_rival: "TOR", name: "Detroit Red Wings", city: "Detroit", city_rival:"Toronto"},
+		{ id: "FLA", id_rival: "TB", name: "Florida Panthers", city: "Florida", city_rival:"Tampa Bay"},
+		{ id: "MON", id_rival: "TOR", name: "Montréal Canadiens", city: "Montreal", city_rival:"Toronto"},
+		{ id: "OTT", id_rival: "MON", name: "Ottawa Senators", city: "Ottawa", city_rival:"Montreal"},
+		{ id: "TB", id_rival: "FLA", name: "Tampa Bay Lightning", city: "Tampa Bay", city_rival:"Florida"},
+		{ id: "CHI", id_rival: "LA", name: "Chicago Blackhawks", city: "Chicago", city_rival:"Los Angeles"},
+		{ id: "COL", id_rival: "NSH", name: "Colorado Avalanche", city: "Colorado", city_rival:"Nashville"},
+		{ id: "DAL", id_rival: "BOS", name: "Dallas Stars", city: "Dallas", city_rival:"Boston"},
+		{ id: "MIN", id_rival: "CHI", name: "Minnesota Wild", city: "Minnesota", city_rival:"Chicago"},
+		{ id: "NSH", id_rival: "COL", name: "Nashville Predators", city: "Nashville", city_rival:"Colorado"},
+		{ id: "STL", id_rival: "CHI", name: "St. Louis Blues", city: "St. Louis", city_rival:"Chicago"},
+		{ id: "WPG", id_rival: "CGY", name: "Winnipeg Jets", city: "Winnipeg", city_rival:"Calgary"},
+		{ id: "ANA", id_rival: "LA", name: "Anaheim Ducks", city: "Anaheim", city_rival:"Los Angeles"},
+		{ id: "ARI", id_rival: "CAR", name: "Arizona Coyotes", city: "Arizona", city_rival:"Carolina"}
+	];
+	
+	for(var i = 0; i < 30; i ++) {
+		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
+		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
+			//saveRival.setRival($scope.teamsSelection[i]);
+			break;
+		}
 	}
+
+	// $scope.changed = function (){
+	// 	// Check what was selected for the favorite team
+	// 	console.log(saveRival.getRival());
+	// 	for(var i = 0; i < 30; i ++) {
+	// 		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
+	// 		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
+	// 			console.log("S" + $scope.rivalteamsSelection[i].id);
+	// 			$scope.theteamsSelection.id = $scope.rivalteamsSelection[i].id;
+	// 			$scope.theteamsSelection = $scope.teamsSelection[0];
+	// 			break;
+	// 		}
+	// 	}
+	// }
 
 	$scope.setStats = function() {
 		$scope.teamID = $scope.theteamsSelection.id;
 		$scope.teamCity = $scope.theteamsSelection.city;
+		for(var i = 0; i < 30; i ++) {
+		console.log($scope.teamID + " == " + $scope.rivalteamsSelection[i].id_rival);
+		if($scope.teamID == $scope.rivalteamsSelection[i].id_rival) {
+			//saveRival.setRival($scope.rivalteamsSelection[i]);
+			break;
+		}
+	}
 
 		$scope.getGameID();
     };
+
 	
   	$scope.games_id = [];
   	$scope.games_info = [];
   	$scope.index = 0;
-
+	$scope.output;
   	$scope.getGameID = function () {
     	$http.get('./games-schedule.json').success(function(data) {
             for(var i = 0; i < data.schedule.length; i++) {
@@ -166,7 +215,29 @@ angular.module('vkBandwagonApp')
 	    	});
 	    }
 	    console.log($scope.games_info);
+	    saveDiscuss.setDiscuss($scope.games_info);
+	    $scope.output = saveDiscuss.getDiscuss();
 	}
 	$scope.getGameID();
 
-  }]);
+
+	 
+
+  }])
+ .service('saveDiscuss', function() {
+    var discuss;
+
+
+    var setDiscuss = function(obj) {
+		  discuss = obj;
+    };
+
+    var getDiscuss = function(){
+    	return discuss;
+  	};
+
+    return {
+  		setDiscuss: setDiscuss,
+  		getDiscuss: getDiscuss,
+    };
+  });
