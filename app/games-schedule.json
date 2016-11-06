@@ -11,7 +11,6 @@
             "id":"78dda5c7-af25-48d9-a4e9-37e85662d06e",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-29T17:00:00+00:00",
             "home_points":3,
             "away_points":0,
             "venue":{  
@@ -44,7 +43,6 @@
             "id":"5146a95b-3fdc-4581-99aa-d3bcc52b372b",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-29T23:00:00+00:00",
             "home_points":0,
             "away_points":1,
             "venue":{  
@@ -77,7 +75,6 @@
             "id":"5e22b6ce-387a-423d-bd2a-7753ad24fd23",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-29T23:00:00+00:00",
             "home_points":2,
             "away_points":1,
             "venue":{  
@@ -109,7 +106,6 @@
             "id":"6d067f0b-141c-4aa4-9fb7-5a8837885f0f",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-29T23:00:00+00:00",
             "home_points":4,
             "away_points":5,
             "venue":{  
@@ -141,7 +137,6 @@
             "id":"8a25b42e-5a87-4373-a7ae-46c092af7b04",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-29T23:00:00+00:00",
             "home_points":3,
             "away_points":1,
             "venue":{  
@@ -174,7 +169,6 @@
             "id":"13346259-c577-447f-8f27-81e96dd2984e",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T00:00:00+00:00",
             "home_points":4,
             "away_points":0,
             "venue":{  
@@ -207,7 +201,6 @@
             "id":"dc866e15-85b6-4a0e-ba35-a4f728e2922d",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T00:00:00+00:00",
             "home_points":1,
             "away_points":0,
             "venue":{  
@@ -240,7 +233,6 @@
             "id":"57e58197-8cc4-4eae-a4bd-df7ed624a99f",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T01:00:00+00:00",
             "home_points":2,
             "away_points":3,
             "venue":{  
@@ -273,7 +265,6 @@
             "id":"e73ea8ba-3da2-4916-b8ac-4f3f06344262",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T02:00:00+00:00",
             "home_points":2,
             "away_points":5,
             "venue":{  
@@ -306,7 +297,6 @@
             "id":"9ca572d2-06ff-4f1a-8ef1-009cde695c9c",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T02:30:00+00:00",
             "home_points":4,
             "away_points":1,
             "venue":{  
@@ -350,7 +340,6 @@
             "id":"d0ef5d82-bf52-4a16-bdf3-7e35d19ee5d5",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T19:00:00+00:00",
             "home_points":1,
             "away_points":3,
             "venue":{  
@@ -382,7 +371,6 @@
             "id":"7af894c7-4832-493f-910a-9892f45c637e",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T21:00:00+00:00",
             "home_points":3,
             "away_points":4,
             "venue":{  
@@ -414,7 +402,6 @@
             "id":"f5b5c06b-63db-44ff-b4a6-d0a40c9fa19d",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T21:00:00+00:00",
             "home_points":2,
             "away_points":5,
             "venue":{  
@@ -447,7 +434,6 @@
             "id":"53cd627c-0990-416d-9b39-e569936b1972",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T22:00:00+00:00",
             "home_points":5,
             "away_points":1,
             "venue":{  
@@ -479,7 +465,6 @@
             "id":"5522fbaf-fe8e-4e34-b4bd-f067971908dc",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T23:00:00+00:00",
             "home_points":6,
             "away_points":1,
             "venue":{  
@@ -512,7 +497,6 @@
             "id":"d5f06915-b7e6-4a10-8c0c-4482b954428f",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-30T23:00:00+00:00",
             "home_points":3,
             "away_points":0,
             "venue":{  
@@ -545,7 +529,6 @@
             "id":"8e8a0da2-8f2b-4cb8-871e-3e42717b6deb",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-31T01:00:00+00:00",
             "home_points":0,
             "away_points":2,
             "venue":{  
@@ -577,7 +560,6 @@
             "id":"6cfe7815-293c-4986-b5d2-7ba096a8bfe3",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-10-31T01:30:00+00:00",
             "home_points":1,
             "away_points":3,
             "venue":{  
@@ -620,7 +602,6 @@
             "id":"0e78de20-c149-461c-af4e-3c8d7c219026",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:00:00+00:00",
             "home_points":3,
             "away_points":2,
             "venue":{  
@@ -653,7 +634,6 @@
             "id":"532dbece-ff53-447d-9dda-7688db0c0afc",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:00:00+00:00",
             "home_points":5,
             "away_points":0,
             "venue":{  
@@ -686,7 +666,6 @@
             "id":"2f1f0564-3df5-4466-bcb4-959a0193efc3",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:30:00+00:00",
             "home_points":3,
             "away_points":2,
             "venue":{  
@@ -718,7 +697,6 @@
             "id":"4d60c80d-e8ee-4234-b19e-029f485aecfc",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:30:00+00:00",
             "home_points":2,
             "away_points":1,
             "venue":{  
@@ -750,7 +728,6 @@
             "id":"a800ef43-6ca5-4c43-9306-faf30e739d66",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:30:00+00:00",
             "home_points":1,
             "away_points":6,
             "venue":{  
@@ -783,7 +760,6 @@
             "id":"b1f74dbf-6a4a-4471-affe-1ad47bbf4164",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-01T23:30:00+00:00",
             "home_points":1,
             "away_points":2,
             "venue":{  
@@ -816,7 +792,6 @@
             "id":"4c6206a8-f5f4-410f-ba5f-275753365f54",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T00:00:00+00:00",
             "home_points":2,
             "away_points":3,
             "venue":{  
@@ -848,7 +823,6 @@
             "id":"608faf00-2d6b-4ae5-a151-4b10ee5fa1a7",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T00:00:00+00:00",
             "home_points":1,
             "away_points":2,
             "venue":{  
@@ -881,7 +855,6 @@
             "id":"3871483f-66fa-492b-a646-dec40bbb1079",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T00:30:00+00:00",
             "home_points":5,
             "away_points":1,
             "venue":{  
@@ -914,7 +887,6 @@
             "id":"8d96c4db-2667-4cf6-a062-ab2fd8409ddd",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T01:00:00+00:00",
             "home_points":1,
             "away_points":5,
             "venue":{  
@@ -947,7 +919,6 @@
             "id":"196099b6-2e3f-42c7-bcec-d1504b8d1ea2",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T02:00:00+00:00",
             "home_points":3,
             "away_points":2,
             "venue":{  
@@ -980,7 +951,6 @@
             "id":"8b776709-24d9-4730-8404-613611d0cdff",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T02:30:00+00:00",
             "home_points":0,
             "away_points":4,
             "venue":{  
@@ -1024,7 +994,6 @@
             "id":"39b157d4-e606-4aa8-88ac-854cd8d6c68e",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-02T23:30:00+00:00",
             "home_points":3,
             "away_points":0,
             "venue":{  
@@ -1056,7 +1025,6 @@
             "id":"f5939603-d1ea-4bed-b70f-1e2c496e120b",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T00:00:00+00:00",
             "home_points":4,
             "away_points":3,
             "venue":{  
@@ -1089,7 +1057,6 @@
             "id":"481ff0c7-1ed7-4d12-a500-60849e6f2d7b",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T02:30:00+00:00",
             "home_points":1,
             "away_points":5,
             "venue":{  
@@ -1133,7 +1100,6 @@
             "id":"e3364a41-8f57-44e1-b4a5-2948b4e43e1a",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:00:00+00:00",
             "home_points":5,
             "away_points":3,
             "venue":{  
@@ -1166,7 +1132,6 @@
             "id":"0c914f1b-d4f3-47d3-8836-05545ad2e794",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:00:00+00:00",
             "home_points":1,
             "away_points":2,
             "venue":{  
@@ -1199,7 +1164,6 @@
             "id":"69872dc3-64fd-4a5e-80bb-195cf2d94c14",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:00:00+00:00",
             "home_points":4,
             "away_points":3,
             "venue":{  
@@ -1232,7 +1196,6 @@
             "id":"862cfb77-631c-4a23-be10-65b6ff55d434",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:00:00+00:00",
             "home_points":2,
             "away_points":3,
             "venue":{  
@@ -1265,7 +1228,6 @@
             "id":"d55d94f6-dba7-4d1c-b291-628757ee8543",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:30:00+00:00",
             "home_points":3,
             "away_points":4,
             "venue":{  
@@ -1298,7 +1260,6 @@
             "id":"e95503c0-ac43-4e03-aa42-14154be673ec",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:30:00+00:00",
             "home_points":1,
             "away_points":0,
             "venue":{  
@@ -1330,7 +1291,6 @@
             "id":"3e7c576a-6dd4-4eea-9e2e-e9816a19e669",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-03T23:30:00+00:00",
             "home_points":4,
             "away_points":3,
             "venue":{  
@@ -1363,7 +1323,6 @@
             "id":"29b60d50-d4a0-4457-b3bb-b2dcae841ac9",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T00:30:00+00:00",
             "home_points":6,
             "away_points":2,
             "venue":{  
@@ -1396,7 +1355,6 @@
             "id":"854d2241-f845-4552-875c-824cd37ddcdc",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T00:30:00+00:00",
             "home_points":4,
             "away_points":0,
             "venue":{  
@@ -1429,7 +1387,6 @@
             "id":"86873632-abb1-4534-94bd-d334e84bb52b",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T02:00:00+00:00",
             "home_points":3,
             "away_points":2,
             "venue":{  
@@ -1462,7 +1419,6 @@
             "id":"d12f0346-c794-4f80-af01-bd72618ab194",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T02:30:00+00:00",
             "home_points":3,
             "away_points":2,
             "venue":{  
@@ -1495,7 +1451,6 @@
             "id":"35f29a9f-dd3e-47a4-b8f7-231e73cc7996",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T02:30:00+00:00",
             "home_points":2,
             "away_points":3,
             "venue":{  
@@ -1538,7 +1493,6 @@
             "id":"5544e468-7ed9-42c7-879f-12e64660d6c2",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T23:00:00+00:00",
             "home_points":10,
             "away_points":0,
             "venue":{  
@@ -1571,7 +1525,6 @@
             "id":"d56597c0-6795-426d-8eb0-e89ed67346a6",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-04T23:30:00+00:00",
             "home_points":3,
             "away_points":5,
             "venue":{  
@@ -1603,7 +1556,6 @@
             "id":"d8085d77-6bb6-4ace-826d-a5dd09ecd115",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-05T02:00:00+00:00",
             "home_points":5,
             "away_points":1,
             "venue":{  
@@ -1647,7 +1599,6 @@
             "id":"7aadbbb8-c227-4195-9646-51c565bf7186",
             "status":"closed",
             "coverage":"full",
-            "scheduled":"2016-11-05T19:00:00+00:00",
             "home_points":1,
             "away_points":0,
             "venue":{  
@@ -1680,7 +1631,6 @@
             "id":"39124ffd-58a9-428b-938e-7f7a0e6ead28",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"854ca968-b25f-44f9-abc5-52bcf8825f15",
                "name":"TD Garden",
@@ -1711,7 +1661,6 @@
             "id":"4c0ccccb-ae5c-4943-a76d-8a308464c215",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"05aa49b2-f72d-4d42-ab30-f219d32ed97b",
                "name":"Amalie Arena",
@@ -1742,7 +1691,6 @@
             "id":"52b9d3ef-3fbe-4b4c-bb18-241f32806cbd",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"a675f98f-4d98-4586-baab-a7ca05904870",
                "name":"Barclays Center",
@@ -1773,7 +1721,6 @@
             "id":"96458b94-0995-4d2b-9b7a-2149905633e3",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"e1e675a3-9c13-48b3-9e22-4c063dd9905d",
                "name":"Canadian Tire Centre",
@@ -1804,7 +1751,6 @@
             "id":"fad46994-38b0-4c03-9b79-8f13996532c2",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"48f092ed-ce49-4a08-97c6-def284ba6721",
                "name":"Verizon Center",
@@ -1835,7 +1781,6 @@
             "id":"ff93a1e6-5faf-4989-a2f9-6153a6899ffa",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"14e923b7-a636-476f-b810-b15967787e3c",
                "name":"Scottrade Center",
@@ -1866,7 +1811,6 @@
             "id":"2018f108-05e7-4c9a-b7d9-dc02e9441e74",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"a84c7004-18b2-4c5d-a036-f0c368c08bc5",
                "name":"Air Canada Centre",
@@ -1896,7 +1840,6 @@
             "id":"2941160c-a8f8-4f75-b6bb-500b897d8ccd",
             "status":"inprogress",
             "coverage":"full",
-            "scheduled":"2016-11-05T23:00:00+00:00",
             "venue":{  
                "id":"2ee8c0bf-dfd1-480c-80df-4d5f66a9dc76",
                "name":"Bell Centre",
@@ -1924,9 +1867,7 @@
          },
          {  
             "id":"6656be1d-9110-4526-a367-d8bbff687e11",
-            "status":"scheduled",
             "coverage":"full",
-            "scheduled":"2016-11-06T00:00:00+00:00",
             "venue":{  
                "id":"cc4e7a62-fae8-4ebb-9a64-f4384385d0b6",
                "name":"Bridgestone Arena",
@@ -1955,9 +1896,7 @@
          },
          {  
             "id":"d5005ea9-f596-452e-8ded-693c19f02b20",
-            "status":"scheduled",
             "coverage":"full",
-            "scheduled":"2016-11-06T00:00:00+00:00",
             "venue":{  
                "id":"adbd1acb-a053-4944-ba15-383eda91c12e",
                "name":"American Airlines Center",
@@ -1986,9 +1925,7 @@
          },
          {  
             "id":"05ef3d1c-2495-42c1-b608-83e8d42741de",
-            "status":"scheduled",
             "coverage":"full",
-            "scheduled":"2016-11-06T02:00:00+00:00",
             "venue":{  
                "id":"dec253d4-68df-470b-b8fc-d663a7fa4704",
                "name":"Staples Center",
@@ -2016,9 +1953,7 @@
          },
          {  
             "id":"e11eca94-bcf2-4ad9-9ab9-30c8a088ba08",
-            "status":"scheduled",
             "coverage":"full",
-            "scheduled":"2016-11-06T02:30:00+00:00",
             "venue":{  
                "id":"1da65282-af4c-4b81-a9de-344b76bb20b0",
                "name":"SAP Center at San Jose",
@@ -2047,4 +1982,5 @@
          }
       ]
    }
+
 ]}

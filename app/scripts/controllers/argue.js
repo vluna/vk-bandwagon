@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name vkBandwagonApp.controller:MainCtrl
+ * @name vkBandwagonApp.controller:ArgueCtrl
  * @description
- * # MainCtrl
+ * # ArgueCtrl
  * Controller of the vkBandwagonApp
  */
 angular.module('vkBandwagonApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('ArgueCtrl', function ($scope) {
     
   });
