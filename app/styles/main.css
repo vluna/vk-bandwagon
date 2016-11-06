@@ -21,14 +21,15 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
+  text-align: center;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
+  padding:2%;
 }
 
 /* Custom page footer */
@@ -45,7 +46,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -70,7 +71,7 @@ body {
   .header,
   .marketing,
   .footer {
-    padding-left: 2%;
+    padding-left: 0;
     padding-right: 0;
   }
   /* Space out the masthead */
@@ -87,13 +88,51 @@ md-select{
   width:200px;
 }
 
+a.md-raised.md-button{
+ background-color:#88caff;
+}
+
 .header{
   color:white;
   background-color:#44657f;
 }
 
+.navIcon{
+  display:inline-block;
+  width:40px;
+}
+
+.navIcon2{
+  display:inline-block;
+  width:25px;
+}
+
+.nav.navbar-nav{
+  width:100%;
+}
+
+.nav.navbar-nav li{
+  width:33.33%;
+}
+
+.navbar{
+  height:70px;
+  min-height:0;
+}
+
+.navbar ul li a{
+  text-align:center;
+  margin:0 auto;
+  height:70px;
+  line-height:70px;
+}
+
+.navbar-nav{
+  margin:0;
+}
+
 .navbar.navbar-fixed-bottom{
- padding-left:2%;
+ padding-left:0;
  background-color:#88caff;
 }
 

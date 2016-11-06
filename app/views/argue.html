@@ -1,0 +1,11 @@
+<div ng-controller="DiscussCtrl">
+    <span>Select a Hockey Team:</span>
+    <md-select ng-model="theteamsSelection" aria-label="theteamsSelection" ng-change="changed()">
+        <md-option ng-value="Team" ng-repeat="Team in teamsSelection">{{ Team.name }}</md-option>
+    </md-select>
+</div>
+
+<div ng-controller="DiscussCtrl">
+    <h3>Rival</h3>
+    <span></span>
+</div>
